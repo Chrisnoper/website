@@ -6,7 +6,7 @@ body {
 }
 
 header {
-  background-image:('website/bg.jpg');
+  background-image:('image/bg.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -17,8 +17,8 @@ header {
 }
 
 .overlay {
-  background-color: rgba(38, 38, 38, 0.4);
-  padding: 20px;
+  background-color: rgba(44, 44, 44, 0.2);
+  padding: 30px;
   margin: 0 20px 40px;
   border-radius: 12px;
   max-width: 90%;
