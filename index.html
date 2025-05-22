@@ -20,7 +20,7 @@
 
   <section class="tentang fade-in">
     <h2>Tentang Korfball</h2>
-    <p>Korfball adalah olahraga campuran pria & wanita yang mirip basket...</p>
+    <p>Korfball adalah olahraga campuran pria & wanita yang mirip basket. Setiap tim terdiri dari 8 pemain (4 pria dan 4 wanita). Tujuannya adalah memasukkan bola ke dalam keranjang tinggi tanpa papan pantul. Korfball menekankan kerja sama dan kesetaraan gender.</p>
   </section>
 
   <section class="galeri fade-in">
@@ -36,19 +36,19 @@
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const elements = document.querySelectorAll(".fade-in");
-
+  
       const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             entry.target.classList.add("show");
           } else {
-            entry.target.classList.remove("show"); // kalau mau hilang saat scroll keluar layar
+            entry.target.classList.remove("show"); // fade-out
           }
         });
       }, {
-        threshold: 0.1
+        threshold: 0.3 // ⬅️ Lebih besar agar elemen benar-benar harus masuk
       });
-
+  
       elements.forEach(el => observer.observe(el));
     });
   </script>
