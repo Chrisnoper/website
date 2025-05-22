@@ -42,11 +42,11 @@
           if (entry.isIntersecting) {
             entry.target.classList.add("show");
           } else {
-            entry.target.classList.remove("show"); // fade-out
+            entry.target.classList.remove("show"); // fade out saat keluar layar
           }
         });
       }, {
-        threshold: 0.3 // ⬅️ Lebih besar agar elemen benar-benar harus masuk
+        threshold: 0.4
       });
   
       elements.forEach(el => observer.observe(el));

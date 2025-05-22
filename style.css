@@ -9,37 +9,21 @@ body {
   line-height: 1.6;
 }
 
-/* ==== FADE IN ANIMATION ==== */
+/* === Fade In / Out Effect === */
 .fade-in {
   opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.8s ease-out;
+  transform: translateY(60px) scale(0.97);
+  transition: opacity 1.2s cubic-bezier(0.25, 0.8, 0.25, 1),
+              transform 1.2s cubic-bezier(0.25, 0.8, 0.25, 1);
   will-change: opacity, transform;
 }
 
 .fade-in.show {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
 }
 
-/* === FADE-IN DELAY KHUSUS GAMBAR GALERI === */
-.galeri-grid img:nth-child(1) {
-  transition-delay: 0.1s;
-}
-.galeri-grid img:nth-child(2) {
-  transition-delay: 0.3s;
-}
-.galeri-grid img:nth-child(3) {
-  transition-delay: 0.5s;
-}
-.galeri-grid img:nth-child(4) {
-  transition-delay: 0.7s;
-}
-.galeri-grid img:nth-child(5) {
-  transition-delay: 0.9s;
-}
-
-/* ==== HEADER ==== */
+/* === Header & Overlay === */
 header {
   background-image: url('image/bg.jpg');
   background-size: cover;
@@ -51,7 +35,6 @@ header {
   justify-content: flex-start;
 }
 
-/* ==== BIODATA BOX ==== */
 .overlay {
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
@@ -67,13 +50,14 @@ header {
   white-space: nowrap;
 }
 
-/* ==== SECTIONS ==== */
+/* === Tentang Section === */
 .tentang {
   background-color: #f0f0f0;
   padding: 2rem;
   font-size: 1.2rem;
 }
 
+/* === Galeri Section === */
 .galeri {
   padding: 2rem;
 }
@@ -90,12 +74,18 @@ header {
   border-radius: 8px;
 }
 
-/* ==== RESPONSIVE ==== */
+/* === Delay Fade untuk Gambar Galeri === */
+.galeri-grid img:nth-child(1) { transition-delay: 0.1s; }
+.galeri-grid img:nth-child(2) { transition-delay: 0.3s; }
+.galeri-grid img:nth-child(3) { transition-delay: 0.5s; }
+.galeri-grid img:nth-child(4) { transition-delay: 0.7s; }
+.galeri-grid img:nth-child(5) { transition-delay: 0.9s; }
+
+/* === Responsive Mobile === */
 @media (max-width: 768px) {
   .overlay h1 {
     font-size: 24px;
   }
-
   .overlay {
     font-size: 1.2rem;
     padding: 1rem;
