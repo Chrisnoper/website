@@ -97,3 +97,33 @@ header {
     padding: 1rem;
   }
 }
+footer.sosmed {
+  background-color: #000;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+footer.sosmed h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.ikon-sosmed {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.ikon-sosmed a img {
+  width: 40px;
+  height: 40px;
+  filter: invert(100%); /* agar ikon putih */
+  transition: transform 0.3s ease;
+}
+
+.ikon-sosmed a img:hover {
+  transform: scale(1.2);
+}
+
