@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Chrisnoper Fredrik Alexsander</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet"/>
 </head>
 <body>
   <header class="fade-in">
@@ -26,31 +26,31 @@
   <section class="galeri fade-in">
     <h2>Galeri Korfball</h2>
     <div class="galeri-grid">
-      <img src="image/korf1.jpg" alt="Korfball 1" class="fade-in">
-      <img src="image/korf2.jpg" alt="Korfball 2" class="fade-in">
-      <img src="image/korf3.jpg" alt="Korfball 3" class="fade-in">
-      <img src="image/korf4.jpg" alt="Korfball 4" class="fade-in">
-      <img src="image/korf5.jpg" alt="Korfball 5" class="fade-in">
+      <img src="image/korf1.jpg" alt="Korfball 1" class="fade-in" />
+      <img src="image/korf2.jpg" alt="Korfball 2" class="fade-in" />
+      <img src="image/korf3.jpg" alt="Korfball 3" class="fade-in" />
+      <img src="image/korf4.jpg" alt="Korfball 4" class="fade-in" />
+      <img src="image/korf5.jpg" alt="Korfball 5" class="fade-in" />
     </div>
   </section>
-
   <script>
-    const faders = document.querySelectorAll('.fade-in');
+    document.addEventListener("DOMContentLoaded", function () {
+      const elements = document.querySelectorAll(".fade-in");
 
-    const appearOptions = {
-      threshold: 0.2,
-      rootMargin: '0px 0px -100px 0px'
-    };
-
-    const appearOnScroll = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('show');
-        observer.unobserve(entry.target);
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          } else {
+            entry.target.classList.remove("show"); // kalau mau hilang saat scroll keluar layar
+          }
+        });
+      }, {
+        threshold: 0.1
       });
-    }, appearOptions);
 
-    faders.forEach(fader => appearOnScroll.observe(fader));
+      elements.forEach(el => observer.observe(el));
+    });
   </script>
 </body>
 </html>
