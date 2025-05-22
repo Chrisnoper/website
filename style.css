@@ -1,76 +1,55 @@
-/* Reset */
-* {
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap');
+
+body {
   margin: 0;
-  padding: 0;
+  font-family: 'League Spartan', sans-serif;
+  background-color: #111;
+  color: #fff;
+}
+
+header {
+  background-image: url('image/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 60px;
   box-sizing: border-box;
 }
 
-/* Body styling */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #111;
-  color: #fff;
-  line-height: 1.6;
-}
-
-/* Header dengan background */
-header {
-  background: url('image/bg.jpg') no-repeat center center/cover;
-  height: 100vh;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-/* Overlay hitam transparan */
 .overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 40px 80px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 30px 40px;
   border-radius: 10px;
+  text-align: left;
+  max-width: 600px;
 }
 
-/* Teks utama besar */
 .overlay h1 {
-  font-size: 4vw;
-  color: #ffe600;
-  margin-bottom: 20px;
+  font-size: 3.2em;
+  margin: 0 0 20px 0;
 }
 
-/* Info pribadi */
 .overlay p {
-  font-size: 1.8vw;
-  margin: 5px 0;
+  font-size: 1.5em;
+  margin: 8px 0;
 }
 
-/* Section tentang dan galeri */
-section {
-  padding: 40px;
+section.tentang {
   background-color: #222;
+  padding: 60px 20px;
   text-align: center;
 }
 
-/* Judul section */
-section h2 {
+.tentang h2 {
   font-size: 2.5em;
   margin-bottom: 20px;
-  color: #ffe600;
 }
 
-/* Galeri gambar */
-.galeri-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.galeri-grid img {
-  width: 180px;
-  height: 240px;
-  object-fit: cover;
-  border-radius: 8px;
-  border: 2px solid #555;
+.tentang p {
+  font-size: 1.2em;
+  max-width: 800px;
+  margin: 0 auto;
 }
