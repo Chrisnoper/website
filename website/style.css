@@ -8,26 +8,26 @@
     font-family: 'Segoe UI', sans-serif;
     background-color: #121212;
     color: #fff;
-    line-height: 1.6;
   }
   
+  /* HEADER SECTION */
   header {
     background-image: url("image/profile.jpg");
     background-size: cover;
     background-position: center;
     height: 100vh;
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
   }
   
   .overlay {
     background-color: rgba(0, 0, 0, 0.6);
     padding: 2rem;
-    border-radius: 10px;
-    animation: fadeIn 2s ease-in-out;
+    border-radius: 12px;
     text-align: center;
+    animation: fadeIn 2s ease-in-out;
   }
   
   .overlay h1 {
@@ -35,29 +35,44 @@
     margin-bottom: 0.5rem;
   }
   
+  .overlay p {
+    font-size: 1.1rem;
+    margin: 0.2rem 0;
+  }
+  
+  /* SECTION UMUM */
   section {
     padding: 3rem 2rem;
+    text-align: center;
   }
   
+  /* TENTANG */
   .tentang {
     background-color: #1e1e1e;
-    text-align: center;
-    animation: slideUp 1s ease-in-out;
+    animation: slideUp 1.5s ease-in-out;
   }
   
+  .tentang h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* GALERI */
   .galeri {
-    text-align: center;
     background-color: #2a2a2a;
-    padding-bottom: 4rem;
     animation: fadeIn 2s ease-in;
+  }
+  
+  .galeri h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
   }
   
   .galeri-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
-    margin-top: 2rem;
-    padding: 0 1rem;
+    padding: 1rem;
   }
   
   .galeri-grid img {
@@ -65,14 +80,15 @@
     height: 180px;
     object-fit: cover;
     border-radius: 10px;
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
   }
   
   .galeri-grid img:hover {
     transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
   }
   
-  /* Animations */
+  /* ANIMASI */
   @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
