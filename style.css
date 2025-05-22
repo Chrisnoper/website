@@ -1,97 +1,53 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: 'League Spartan', sans-serif;
-  background-color: #111;
-  color: white;
+  line-height: 1.6;
 }
 
 header {
-  background-image:('image/bg.jpg');
+  background-image: url('image/bg.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   min-height: 100vh;
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 .overlay {
-  background-color: rgba(44, 44, 44, 0.2);
-  padding: 30px;
-  margin: 0 20px 40px;
-  border-radius: 12px;
-  max-width: 90%;
+  background-color: rgba(0, 0, 0, 0.5); /* Transparansi hitam */
+  color: white;
+  padding: 2rem;
+  max-width: 700px;
   text-align: left;
-}
-
-.overlay h1 {
-  font-size: 36px;
-  margin-bottom: 10px;
-}
-
-.overlay p {
-  font-size: 18px;
-  margin: 5px 0;
+  font-size: 2rem;
 }
 
 .tentang {
-  background-color: #222;
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.tentang h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
-}
-
-.tentang p {
-  font-size: 18px;
-  max-width: 800px;
-  margin: 0 auto;
+  background-color: #f0f0f0;
+  padding: 2rem;
+  font-size: 1.2rem;
 }
 
 .galeri {
-  background-color: #111;
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.galeri h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
+  padding: 2rem;
 }
 
 .galeri-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
 }
 
 .galeri-grid img {
-  width: 200px;
+  width: 100%;
+  height: auto;
   border-radius: 8px;
-  transition: transform 0.3s;
-}
-
-.galeri-grid img:hover {
-  transform: scale(1.05);
-}
-
-/* Responsive untuk mobile */
-@media (max-width: 768px) {
-  .overlay h1 {
-    font-size: 24px;
-  }
-
-  .overlay p {
-    font-size: 16px;
-  }
-
-  .galeri-grid img {
-    width: 100%;
-    max-width: 300px;
-  }
 }
