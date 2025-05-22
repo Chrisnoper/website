@@ -7,9 +7,10 @@
 body {
   font-family: 'League Spartan', sans-serif;
   line-height: 1.6;
-  background-color: #000; /* Mencegah flash putih saat load */
+  background-color: black;
+  color: white;
+  min-height: 100vh;
 }
-
 
 /* === Fade In / Out Effect === */
 .fade-in {
@@ -19,13 +20,12 @@ body {
               transform 1.2s cubic-bezier(0.25, 0.8, 0.25, 1);
   will-change: opacity, transform;
 }
-
 .fade-in.show {
   opacity: 1;
   transform: translateY(0) scale(1);
 }
 
-/* === Header & Overlay === */
+/* Header */
 header {
   background-image: url('image/bg.jpg');
   background-size: cover;
@@ -36,7 +36,6 @@ header {
   align-items: flex-end;
   justify-content: flex-start;
 }
-
 .overlay {
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
@@ -45,33 +44,26 @@ header {
   text-align: left;
   font-size: 2rem;
 }
-
 .overlay h1 {
   font-size: 36px;
   margin-bottom: 10px;
   white-space: nowrap;
 }
 
-.tentang {
-  background-color: #000000; /* Hitam solid */
-  color: #ffffff;
+/* Section */
+.tentang, .galeri {
+  background-color: #000;
   padding: 2rem;
   font-size: 1.2rem;
+  color: white;
 }
 
-.galeri {
-  background-color: #000000; /* Hitam solid */
-  color: #ffffff;
-  padding: 2rem;
-}
-
-
+/* Galeri */
 .galeri-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
 }
-
 .galeri-grid img {
   width: 100%;
   height: auto;
@@ -79,15 +71,42 @@ header {
   border: 1px solid #fff;
 }
 
-
-/* === Delay Fade untuk Gambar Galeri === */
+/* Delay Fade */
 .galeri-grid img:nth-child(1) { transition-delay: 0.1s; }
 .galeri-grid img:nth-child(2) { transition-delay: 0.3s; }
 .galeri-grid img:nth-child(3) { transition-delay: 0.5s; }
 .galeri-grid img:nth-child(4) { transition-delay: 0.7s; }
 .galeri-grid img:nth-child(5) { transition-delay: 0.9s; }
 
-/* === Responsive Mobile === */
+/* Footer Sosial Media */
+footer.sosmed {
+  background-color: #000;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+footer.sosmed h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+.ikon-sosmed {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.ikon-sosmed a img {
+  width: 40px;
+  height: 40px;
+  filter: invert(100%);
+  transition: transform 0.3s ease;
+}
+.ikon-sosmed a img:hover {
+  transform: scale(1.2);
+}
+
+/* Mobile Responsive */
 @media (max-width: 768px) {
   .overlay h1 {
     font-size: 24px;
@@ -96,34 +115,8 @@ header {
     font-size: 1.2rem;
     padding: 1rem;
   }
+  .ikon-sosmed a img {
+    width: 32px;
+    height: 32px;
+  }
 }
-footer.sosmed {
-  background-color: #000;
-  color: white;
-  text-align: center;
-  padding: 2rem;
-}
-
-footer.sosmed h2 {
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-}
-
-.ikon-sosmed {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-
-.ikon-sosmed a img {
-  width: 40px;
-  height: 40px;
-  filter: invert(100%); /* agar ikon putih */
-  transition: transform 0.3s ease;
-}
-
-.ikon-sosmed a img:hover {
-  transform: scale(1.2);
-}
-
