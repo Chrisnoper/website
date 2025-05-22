@@ -1,54 +1,64 @@
-/* style.css */
-
-body {
+/* Reset */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
   font-family: Arial, sans-serif;
   background-color: #111;
   color: #fff;
+  line-height: 1.6;
 }
 
+/* Header dengan background */
 header {
   background: url('image/bg.jpg') no-repeat center center/cover;
   height: 100vh;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
 
+/* Overlay hitam transparan */
 .overlay {
   background-color: rgba(0, 0, 0, 0.6);
-  padding: 30px;
+  padding: 40px 80px;
   border-radius: 10px;
 }
 
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-p {
-  font-size: 1.2rem;
-  margin: 5px 0;
-}
-
-.tentang, .galeri {
-  padding: 40px 20px;
-  text-align: center;
-  background-color: #222;
-}
-
-.tentang h2, .galeri h2 {
-  font-size: 2rem;
+/* Teks utama besar */
+.overlay h1 {
+  font-size: 4vw;
+  color: #ffe600;
   margin-bottom: 20px;
 }
 
-.tentang p {
-  font-size: 1.2rem;
-  max-width: 800px;
-  margin: 0 auto;
+/* Info pribadi */
+.overlay p {
+  font-size: 1.8vw;
+  margin: 5px 0;
 }
 
+/* Section tentang dan galeri */
+section {
+  padding: 40px;
+  background-color: #222;
+  text-align: center;
+}
+
+/* Judul section */
+section h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #ffe600;
+}
+
+/* Galeri gambar */
 .galeri-grid {
   display: flex;
   flex-wrap: wrap;
@@ -58,14 +68,9 @@ p {
 }
 
 .galeri-grid img {
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 240px;
   object-fit: cover;
-  border-radius: 10px;
-  border: 2px solid #444;
-  transition: transform 0.3s ease;
-}
-
-.galeri-grid img:hover {
-  transform: scale(1.05);
+  border-radius: 8px;
+  border: 2px solid #555;
 }
