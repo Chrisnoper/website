@@ -11,21 +11,22 @@ header {
   background-image: url('image/bg.jpg');
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  padding: 20px 60px 40px 60px;
   display: flex;
-  align-items: flex-end;
   justify-content: flex-start;
-  padding: 60px;
-  box-sizing: border-box;
+  align-items: flex-end;
+  height: auto; /* Ubah dari 100vh ke auto */
 }
 
 .overlay {
   background-color: rgba(0, 0, 0, 0.7);
   padding: 30px 40px;
   border-radius: 10px;
-  text-align: left;
+  text-align: left; /* Bikin semua teks rata kiri */
   max-width: 600px;
+  margin-top: 300px; /* Tambah jarak dari atas */
 }
+
 
 .overlay h1 {
   font-size: 3.2em;
