@@ -1,82 +1,97 @@
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap');
-
 body {
   margin: 0;
   font-family: 'League Spartan', sans-serif;
   background-color: #111;
-  color: #fff;
+  color: white;
 }
 
 header {
   background-image: url('image/bg.jpg');
   background-size: cover;
   background-position: center;
-  padding: 20px 60px 40px 60px;
+  background-repeat: no-repeat;
+  min-height: 100vh;
   display: flex;
-  justify-content: flex-start;
   align-items: flex-end;
-  height: auto; /* Ubah dari 100vh ke auto */
+  justify-content: flex-start;
 }
 
 .overlay {
   background-color: rgba(0, 0, 0, 0.7);
-  padding: 30px 40px;
-  border-radius: 10px;
-  text-align: left; /* Bikin semua teks rata kiri */
-  max-width: 600px;
-  margin-top: 300px; /* Tambah jarak dari atas */
+  padding: 20px;
+  margin: 0 20px 40px;
+  border-radius: 12px;
+  max-width: 90%;
+  text-align: left;
 }
 
-
 .overlay h1 {
-  font-size: 3.2em;
-  margin: 0 0 20px 0;
+  font-size: 36px;
+  margin-bottom: 10px;
 }
 
 .overlay p {
-  font-size: 1.5em;
-  margin: 8px 0;
+  font-size: 18px;
+  margin: 5px 0;
 }
 
-section.tentang {
+.tentang {
   background-color: #222;
-  padding: 60px 20px;
+  padding: 40px 20px;
   text-align: center;
 }
 
 .tentang h2 {
-  font-size: 2.5em;
+  font-size: 28px;
   margin-bottom: 20px;
 }
 
 .tentang p {
-  font-size: 1.2em;
+  font-size: 18px;
   max-width: 800px;
   margin: 0 auto;
 }
 
-/* === Responsive untuk Mobile === */
+.galeri {
+  background-color: #111;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.galeri h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.galeri-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.galeri-grid img {
+  width: 200px;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.galeri-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive untuk mobile */
 @media (max-width: 768px) {
-  header {
-    padding: 20px 20px 10px 20px;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .overlay {
-    width: 100%;
-    padding: 20px;
-    margin-top: 20px;
-    font-size: 16px;
-  }
-
   .overlay h1 {
-    font-size: 22px;
-    line-height: 1.2;
+    font-size: 24px;
   }
 
   .overlay p {
     font-size: 16px;
-    margin: 5px 0;
+  }
+
+  .galeri-grid img {
+    width: 100%;
+    max-width: 300px;
   }
 }
