@@ -18,29 +18,37 @@ header {
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
-  position: 2rem;
+  padding: 2rem;
+  position: relative;
 }
 
 .overlay {
-  background-color: rgba(0, 0, 0, 0.5); /* Transparansi hitam */
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
   padding: 2rem;
-  max-width: 800px;
+  max-width: 90%;
+  font-size: 1.8rem;
   text-align: left;
-  font-size: 2rem;
-}
-.overlay h1 {
-  font-size: 36px;        /* atau ukuran yang ingin kamu pakai */
-  margin-bottom: 10px;
-  white-space: nowrap;    /* ⬅️ mencegah teks turun ke baris baru */
+  border-radius: 8px;
+  margin-bottom: 2rem;
 }
 
+.overlay h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* SECTION: Tentang */
 .tentang {
   background-color: #f0f0f0;
   padding: 2rem;
   font-size: 1.2rem;
 }
 
+/* SECTION: Galeri */
 .galeri {
   padding: 2rem;
 }
@@ -57,8 +65,37 @@ header {
   border-radius: 8px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 700px) {
+  header {
+    min-height: 70vh;
+    padding: 1rem;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  .overlay {
+    font-size: 1rem;
+    padding: 1rem;
+    text-align: center;
+  }
+
   .overlay h1 {
-    font-size: 24px;
+    font-size: 1.5rem;
+    white-space: normal;
+  }
+
+
+
+  .tentang {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .galeri {
+    padding: 1rem;
+  }
+
+  .galeri-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
 }
