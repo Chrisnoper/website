@@ -1,45 +1,85 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #1f1c2c, #928dab);
-  color: #fff;
-}
-
-.hero {
-  width: 100%;
-  height: 90vh;
-  background: url('images/profile.jpg') no-repeat center center/cover;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  position: relative;
-  box-shadow: inset 0 -60px 60px rgba(0,0,0,0.6);
-}
-
-.container {
-  max-width: 700px;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 40px;
-  margin: -80px auto 40px auto;
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-  backdrop-filter: blur(10px);
-  animation: fadeIn 1.2s ease-out;
-}
-
-h1, h2 {
-  color: #ffffff;
-  margin-top: 0;
-}
-
-p {
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #121212;
+    color: #fff;
+    line-height: 1.6;
+  }
+  
+  header {
+    background-image: url("image/profile.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 10px;
+    animation: fadeIn 2s ease-in-out;
+    text-align: center;
+  }
+  
+  .overlay h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  section {
+    padding: 3rem 2rem;
+  }
+  
+  .tentang {
+    background-color: #1e1e1e;
+    text-align: center;
+    animation: slideUp 1s ease-in-out;
+  }
+  
+  .galeri {
+    text-align: center;
+    background-color: #2a2a2a;
+    padding-bottom: 4rem;
+    animation: fadeIn 2s ease-in;
+  }
+  
+  .galeri-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+    padding: 0 1rem;
+  }
+  
+  .galeri-grid img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+  }
+  
+  .galeri-grid img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
