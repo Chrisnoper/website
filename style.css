@@ -29,6 +29,11 @@ header {
   text-align: left;
   font-size: 2rem;
 }
+.overlay h1 {
+  font-size: 36px;        /* atau ukuran yang ingin kamu pakai */
+  margin-bottom: 10px;
+  white-space: nowrap;    /* ⬅️ mencegah teks turun ke baris baru */
+}
 
 .tentang {
   background-color: #f0f0f0;
@@ -50,4 +55,10 @@ header {
   width: 100%;
   height: auto;
   border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .overlay h1 {
+    font-size: 24px;
+  }
 }
