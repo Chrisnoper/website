@@ -7,7 +7,9 @@
 body {
   font-family: 'League Spartan', sans-serif;
   line-height: 1.6;
+  background-color: #000; /* Mencegah flash putih saat load */
 }
+
 
 /* === Fade In / Out Effect === */
 .fade-in {
@@ -51,17 +53,18 @@ header {
 }
 
 .tentang {
-  background-color: rgba(0, 0, 0, 0.85); /* Hitam semi-transparan */
+  background-color: #000000; /* Hitam solid */
   color: #ffffff;
   padding: 2rem;
   font-size: 1.2rem;
 }
 
 .galeri {
-  background-color: rgba(0, 0, 0, 0.85); /* Hitam semi-transparan */
+  background-color: #000000; /* Hitam solid */
   color: #ffffff;
   padding: 2rem;
 }
+
 
 .galeri-grid {
   display: grid;
