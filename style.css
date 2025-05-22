@@ -50,15 +50,16 @@ header {
   white-space: nowrap;
 }
 
-/* === Tentang Section === */
 .tentang {
-  background-color: #f0f0f0;
+  background-color: rgba(0, 0, 0, 0.85); /* Hitam semi-transparan */
+  color: #ffffff;
   padding: 2rem;
   font-size: 1.2rem;
 }
 
-/* === Galeri Section === */
 .galeri {
+  background-color: rgba(0, 0, 0, 0.85); /* Hitam semi-transparan */
+  color: #ffffff;
   padding: 2rem;
 }
 
@@ -72,7 +73,9 @@ header {
   width: 100%;
   height: auto;
   border-radius: 8px;
+  border: 1px solid #fff;
 }
+
 
 /* === Delay Fade untuk Gambar Galeri === */
 .galeri-grid img:nth-child(1) { transition-delay: 0.1s; }
