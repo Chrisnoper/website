@@ -9,6 +9,18 @@ body {
   line-height: 1.6;
 }
 
+/* Fade-in effect */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 header {
   background-image: url('image/bg.jpg');
   background-size: cover;
@@ -18,37 +30,29 @@ header {
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
-  padding: 2rem;
-  position: relative;
 }
 
 .overlay {
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   padding: 2rem;
-  max-width: 90%;
-  font-size: 1.8rem;
+  max-width: 800px;
   text-align: left;
-  border-radius: 8px;
-  margin-bottom: 2rem;
+  font-size: 2rem;
 }
 
 .overlay h1 {
-  font-size: 2.2rem;
-  margin-bottom: 1rem;
+  font-size: 36px;
+  margin-bottom: 10px;
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
-/* SECTION: Tentang */
 .tentang {
   background-color: #f0f0f0;
   padding: 2rem;
   font-size: 1.2rem;
 }
 
-/* SECTION: Galeri */
 .galeri {
   padding: 2rem;
 }
@@ -65,37 +69,13 @@ header {
   border-radius: 8px;
 }
 
-@media (max-width: 700px) {
-  header {
-    min-height: 70vh;
-    padding: 1rem;
-    justify-content: center;
-    align-items: flex-end;
-  }
-
-  .overlay {
-    font-size: 1rem;
-    padding: 1rem;
-    text-align: center;
-  }
-
+/* Responsif */
+@media (max-width: 768px) {
   .overlay h1 {
-    font-size: 1.5rem;
-    white-space: normal;
+    font-size: 24px;
   }
-
-
-
-  .tentang {
+  .overlay {
+    font-size: 1.2rem;
     padding: 1rem;
-    font-size: 1rem;
-  }
-
-  .galeri {
-    padding: 1rem;
-  }
-
-  .galeri-grid {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
 }
