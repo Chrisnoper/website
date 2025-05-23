@@ -142,39 +142,34 @@ footer.sosmed h2 {
   position: relative;
 }
 
+.akar-button {
+  z-index: 2;
+  position: relative;
+}
+
 .akar {
   position: absolute;
-  width: 80px;
+  width: 70px;
   opacity: 1;
-  z-index: 1;
+  z-index: 3; /* DI ATAS TOMBOL */
   animation: akarGerak 4s infinite ease-in-out;
 }
 
-/* Posisi menyebar dari berbagai arah */
-.akar-1 { top: -60px; left: -50px; transform: rotate(-50deg); }
-.akar-2 { top: -70px; right: -50px; transform: rotate(60deg) scaleX(-1); }
-.akar-3 { bottom: -60px; left: -55px; transform: rotate(45deg); }
-.akar-4 { bottom: -70px; right: -55px; transform: rotate(-45deg) scaleX(-1); }
-.akar-5 { left: -80px; top: 0px; transform: rotate(90deg); }
-.akar-6 { right: -80px; top: 0px; transform: rotate(-90deg) scaleX(-1); }
-.akar-7 { top: -50px; left: 20px; transform: rotate(-20deg); }
-.akar-8 { bottom: -50px; right: 20px; transform: rotate(20deg) scaleX(-1); }
+/* Tempel lebih dekat ke tombol */
+.akar-1 { top: -20px; left: -30px; transform: rotate(-40deg); }
+.akar-2 { top: -25px; right: -30px; transform: rotate(40deg) scaleX(-1); }
+.akar-3 { bottom: -20px; left: -25px; transform: rotate(30deg); }
+.akar-4 { bottom: -25px; right: -25px; transform: rotate(-30deg) scaleX(-1); }
+.akar-5 { top: 10px; left: -60px; transform: rotate(-90deg); }
+.akar-6 { top: 10px; right: -60px; transform: rotate(90deg) scaleX(-1); }
+.akar-7 { top: -15px; left: 10px; transform: rotate(-15deg); }
+.akar-8 { bottom: -15px; right: 10px; transform: rotate(15deg) scaleX(-1); }
 
-/* Animasi akar lebih jelas */
 @keyframes akarGerak {
   0%, 100% {
-    transform: translate(0, 0) rotate(var(--rot));
+    transform: translate(0, 0) rotate(0deg);
   }
   50% {
-    transform: translate(5px, -5px) rotate(calc(var(--rot) + 5deg));
+    transform: translate(3px, -3px) rotate(2deg);
   }
 }
-@media (max-width: 768px) {
-  .akar {
-    width: 50px;
-  }
-  .akar-wrapper {
-    margin: 40px auto;
-  }
-}
-
