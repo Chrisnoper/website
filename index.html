@@ -6,19 +6,56 @@
   <title>Chrisnoper Fredrik Alexsander</title>
   <link rel="stylesheet" href="style.css"/>
   <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet"/>
-</head>
-<style>
-  body {
-    opacity: 0;
-    transition: opacity 1s ease;
-  }
-</style>
-<script>
-  window.addEventListener("DOMContentLoaded", () => {
-    document.body.style.opacity = 1;
-  });
-</script>
+  <style>
+    body {
+      opacity: 0;
+      transition: opacity 1s ease;
+    }
 
+    .explore-button {
+      display: inline-block;
+      padding: 14px 30px;
+      font-size: 18px;
+      background-color: #4e2e1f;
+      color: white;
+      border: 2px solid #a57c48;
+      border-radius: 16px;
+      position: relative;
+      text-decoration: none;
+      transition: 0.4s ease;
+      box-shadow: 0 0 10px rgba(165, 124, 72, 0.3);
+      overflow: hidden;
+    }
+
+    .explore-button::before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      right: -10px;
+      bottom: -10px;
+      border: 2px dashed #a57c48;
+      border-radius: 22px;
+      pointer-events: none;
+      animation: spin 5s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .explore-button:hover {
+      background-color: #5a3b29;
+      box-shadow: 0 0 20px #a57c48;
+    }
+  </style>
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      document.body.style.opacity = 1;
+    });
+  </script>
+</head>
 <body>
   <header class="fade-in">
     <div class="overlay">
@@ -47,23 +84,9 @@
   </section>
 
   <div class="button-wrapper" style="text-align: center; margin-top: 40px;">
-    <a href="pramuka.html" class="fade-link">
-      <button style="
-        padding: 12px 28px;
-        font-size: 18px;
-        background-color: #000;
-        color: white;
-        border: none;
-        border-radius: 12px;
-        cursor: pointer;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        transition: transform 0.2s, box-shadow 0.2s;
-      " onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.3)'" 
-         onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.2)'">
-        Explore Pramuka Journey
-      </button>
-    </a>
+    <a href="pramuka.html" class="explore-button">Explore Pramuka Journey</a>
   </div>
+
   <footer class="sosmed fade-in">
     <h2>Connect with Me</h2>
     <div class="ikon-sosmed">
