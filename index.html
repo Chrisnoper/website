@@ -6,56 +6,64 @@
   <title>Chrisnoper Fredrik Alexsander</title>
   <link rel="stylesheet" href="style.css"/>
   <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet"/>
+
   <style>
     body {
       opacity: 0;
       transition: opacity 1s ease;
     }
 
-    .explore-button {
+    .root-container {
+      position: relative;
       display: inline-block;
+      margin-top: 40px;
+    }
+
+    .explore-button {
       padding: 14px 30px;
       font-size: 18px;
-      background-color: #4e2e1f;
+      background-color: #000;
       color: white;
-      border: 2px solid #a57c48;
-      border-radius: 16px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      z-index: 2;
       position: relative;
-      text-decoration: none;
-      transition: 0.4s ease;
-      box-shadow: 0 0 10px rgba(165, 124, 72, 0.3);
-      overflow: hidden;
     }
 
-    .explore-button::before {
-      content: "";
+    .root-svg {
       position: absolute;
-      top: -10px;
-      left: -10px;
-      right: -10px;
-      bottom: -10px;
-      border: 2px dashed #a57c48;
-      border-radius: 22px;
+      top: -20px;
+      left: -20px;
+      width: 160%;
+      height: 160%;
+      z-index: 1;
       pointer-events: none;
-      animation: spin 5s linear infinite;
     }
 
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
+    .root-path {
+      fill: none;
+      stroke: #a57c48;
+      stroke-width: 2;
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      animation: drawRoot 5s linear forwards;
     }
 
-    .explore-button:hover {
-      background-color: #5a3b29;
-      box-shadow: 0 0 20px #a57c48;
+    @keyframes drawRoot {
+      to {
+        stroke-dashoffset: 0;
+      }
     }
   </style>
+
   <script>
     window.addEventListener("DOMContentLoaded", () => {
       document.body.style.opacity = 1;
     });
   </script>
 </head>
+
 <body>
   <header class="fade-in">
     <div class="overlay">
@@ -83,8 +91,18 @@
     </div>
   </section>
 
-  <div class="button-wrapper" style="text-align: center; margin-top: 40px;">
-    <a href="pramuka.html" class="explore-button">Explore Pramuka Journey</a>
+  <div class="button-wrapper" style="text-align: center;">
+    <div class="root-container">
+      <a href="pramuka.html" class="explore-button">Explore Pramuka Journey</a>
+      <svg class="root-svg" viewBox="0 0 200 60" preserveAspectRatio="none">
+        <path class="root-path"
+          d="M10,30 
+             C30,10 50,50 70,30 
+             S110,10 130,30 
+             S170,50 190,30"
+        />
+      </svg>
+    </div>
   </div>
 
   <footer class="sosmed fade-in">
