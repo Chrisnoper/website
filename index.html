@@ -7,6 +7,18 @@
   <link rel="stylesheet" href="style.css"/>
   <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet"/>
 </head>
+<style>
+  body {
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+</style>
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    document.body.style.opacity = 1;
+  });
+</script>
+
 <body>
   <header class="fade-in">
     <div class="overlay">
@@ -33,7 +45,11 @@
       <img src="image/korf5.jpg" alt="Korfball 5" class="fade-in"/>
     </div>
   </section>
-
+  <div class="button-wrapper" style="text-align: center; margin-top: 40px;">
+    <a href="pramuka.html" class="fade-link">
+      <button style="padding: 10px 20px; font-size: 16px;">Go to Pramuka Page</button>
+    </a>
+  </div>
   <footer class="sosmed fade-in">
     <h2>Connect with Me</h2>
     <div class="ikon-sosmed">
