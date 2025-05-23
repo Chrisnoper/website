@@ -3,51 +3,117 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pramuka</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Pramuka - Chrisnoper</title>
+  <link rel="stylesheet" href="style.css"/>
   <style>
     body {
       background-color: black;
       color: white;
+      font-family: 'League Spartan', sans-serif;
       opacity: 0;
       transition: opacity 1s ease;
     }
-    .gallery img {
-      width: 200px;
-      margin: 10px;
-    }
-  </style>
-</head>
-<style>
-    body {
+
+    .fade-in {
       opacity: 0;
-      transition: opacity 1s ease;
+      transform: translateY(20px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h1, h2 {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .galeri-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .galeri-grid img {
+      width: 100%;
+      border-radius: 16px;
+      transition: transform 0.3s ease;
+    }
+
+    .galeri-grid img:hover {
+      transform: scale(1.05);
+    }
+
+    .back-button {
+      display: inline-block;
+      background-color: #333;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-size: 16px;
+      margin: 40px auto;
+      text-align: center;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #555;
+    }
+
+    .content {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
     }
   </style>
   <script>
     window.addEventListener("DOMContentLoaded", () => {
       document.body.style.opacity = 1;
-    });
-  </script>  
-<body>
-  <script>
-    window.addEventListener("DOMContentLoaded", () => {
-      document.body.style.opacity = 1;
+
+      const elements = document.querySelectorAll(".fade-in");
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
+        });
+      }, { threshold: 0.1 });
+
+      elements.forEach(el => observer.observe(el));
     });
   </script>
+</head>
+<body>
+  <h1 class="fade-in">Pramuka</h1>
 
-  <section style="padding: 50px; text-align: center;">
-    <h1>What is Pramuka?</h1>
-    <p>Pramuka is the Indonesian scout movement, which instills discipline, leadership, and community service in youth.</p>
-    <p>It helps develop physical, mental, and social skills through outdoor activities, teamwork, and challenges.</p>
-  </section>
+  <div class="content fade-in">
+    <h2>What is Pramuka?</h2>
+    <p>
+      Pramuka is the Indonesian Scout Movement, a national youth organization that fosters character, leadership, and outdoor survival skills. It is based on the principles of Scouting founded by Baden Powell, but uniquely adapted to Indonesian culture and values. Pramuka teaches discipline, independence, cooperation, and patriotism through various outdoor activities, training, and community service.
+    </p>
+    <p>
+      In Indonesia, Scout is an important part of school education. Every student is encouraged to join and participate in camps, flag ceremonies, and competitions that challenge both mental and physical abilities.
+    </p>
+    <p>
+      I am proud to be a Scout graduate from <strong>SMK 5 Tangerang Selatan</strong>, where I achieved the rank of <strong>Penegak Laksana</strong>. I also studied at <strong>SMP 20 Tangerang Selatan</strong>, where my Scout journey first began.
+    </p>
+  </div>
 
-  <section class="gallery" style="text-align: center;">
-    <h2>Pramuka Gallery</h2>
-    <img src="image/pramuka1.jpg" alt="Pramuka 1">
-    <img src="image/pramuka2.jpg" alt="Pramuka 2">
-    <img src="image/pramuka3.jpg" alt="Pramuka 3">
-    <!-- tambahkan lebih banyak gambar jika diperlukan -->
-  </section>
+  <div class="fade-in">
+    <h2 style="text-align:center;">Pramuka Gallery</h2>
+    <div class="galeri-grid">
+      <img src="image/pramuka1.jpg" alt="Pramuka 1"/>
+      <img src="image/pramuka2.jpg" alt="Pramuka 2"/>
+      <img src="image/pramuka3.jpg" alt="Pramuka 3"/>
+    </div>
+  </div>
+
+  <div style="text-align: center;" class="fade-in">
+    <a href="index.html" class="back-button">← Back to Main Page</a>
+  </div>
 </body>
 </html>
